@@ -1,0 +1,14 @@
+# apiVersion: networking.k8s.io/v1beta1
+# kind: Ingress
+# metadata:
+#   name: web
+#   labels:
+#     app.kubernetes.io/name: web
+# spec:
+#   rules:
+#   - host: phr.alterra.id
+#     http:
+#       paths:
+#       - backend:
+#           serviceName: bimaphr
+#           servicePort: 80

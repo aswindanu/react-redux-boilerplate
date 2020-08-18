@@ -1,0 +1,21 @@
+# apiVersion: apps/v1
+# kind: Deployment
+# metadata:
+#   name: bimaphr
+# spec:
+#   replicas: 1
+#   selector:
+#     matchLabels:
+#       app: bimaphr
+#   template:
+#     metadata:
+#       labels:
+#         app: bimaphr
+#     spec:
+#       containers:
+#       - name: bimaphr
+#         image: pelabuhan.alterra.dev/bimaphr/frontend:latest
+#         ports:
+#           - containerPort: 80
+#       imagePullSecrets:
+#       - name: pelabuhan-regcred-2

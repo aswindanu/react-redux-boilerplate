@@ -1,0 +1,45 @@
+{
+  "env": {
+      "browser": true,
+      "es6": true,
+      "node": true,
+      "jest": true
+  },
+  "extends": [
+      "plugin:react/recommended",
+      "airbnb",
+      "plugin:react-redux/recommended"
+  ],
+  "parser": "babel-eslint",
+  "globals": {
+      "Atomics": "readonly",
+      "SharedArrayBuffer": "readonly"
+  },
+  "parserOptions": {
+      "ecmaFeatures": {
+          "jsx": true
+      },
+      "ecmaVersion": 2018,
+      "sourceType": "module"
+  },
+  "plugins": [
+      "react",
+      "react-redux"
+  ],
+  "rules": {
+      "react/jsx-filename-extension": [
+          1,
+          {
+              "extensions": [
+                  ".js",
+                  ".jsx"
+              ]
+          }
+      ],
+      "react-redux/connect-prefer-named-arguments": 2,
+      "no-shadow": "off",
+      "func-names": ["error", "as-needed"],
+      "no-plusplus": ["error", { "allowForLoopAfterthoughts": true }],
+      "import/no-named-as-default": 0
+  }
+}
