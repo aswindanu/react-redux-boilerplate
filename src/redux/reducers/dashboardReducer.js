@@ -4,7 +4,7 @@
  *
  */
 
-import * as CONST from '../constants/index';
+import * as CONST from '../constants';
 
 const initialState = {
   userName: '',

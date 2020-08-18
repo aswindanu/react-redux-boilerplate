@@ -1,1 +1,1 @@
-export * from './dashboardSelector';
+export * from './DashboardSelector';

@@ -1,1 +1,1 @@
-export * from './dashboardConstant';
+export * from './DashboardConstant';

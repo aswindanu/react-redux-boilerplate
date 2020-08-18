@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
 // API
-import axiosUser from '../api/sampleApi';
+import axiosUser from '../api/userApi';
 import axiosToken from '../api/tokenApi';
 
 // Actions

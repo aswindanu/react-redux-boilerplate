@@ -1,0 +1,14 @@
+[
+  {
+    "title": "Home",
+    "type": "Item",
+    "url": "/",
+    "icon": "home"
+  },
+  {
+    "title": "Dashboard",
+    "type": "Item",
+    "url": "/dashboard",
+    "icon": "home"
+  }
+]
