@@ -3,8 +3,11 @@ import { shallow } from 'enzyme';
 import { Dashboard } from '../../src/components/DashboardComponent';
 
 // API
-import axiosUser from '../../src/api/sampleApi';
+import axiosUser from '../../src/api/userApi';
 import axiosToken from '../../src/api/tokenApi';
+
+// Context handle
+const changeInputReduxMock = jest.fn();
 
 function shallowSetup() {
   const props = {
@@ -15,9 +18,10 @@ function shallowSetup() {
     token: '',
     context: '',
   };
+
   /* eslint-disable react/jsx-props-no-spreading */
   const wrapper = shallow(
-    <Dashboard {...props} />,
+    <Dashboard {...props} changeInputRedux={changeInputReduxMock} />,
   );
   return {
     props,
@@ -36,11 +40,20 @@ describe('<Dashboard /> rendering', () => {
   const { wrapper } = shallowSetup();
 
   it('should render <Dashboard />', async () => {
-    wrapper.find('button#user').simulate('click');
-    wrapper.find('button#token').simulate('click');
+    const event = {
+      target: {
+        name: 'custom',
+        value: 'abcde',
+      },
+    };
+
     // Wait axios async
     await flushPromises();
     wrapper.update();
+
+    wrapper.find('button#user').simulate('click');
+    wrapper.find('button#token').simulate('click');
+    wrapper.find('input#context').simulate('change', event);
 
     // Simulate click button
     expect(wrapper.find('button#user')).toHaveLength(1);

@@ -27,9 +27,7 @@ export default async function axiosToken() {
     .then(async (response) => {
       return response.data;
     })
-    .catch(async (error) => {
-      console.log(error);
-    });
+    .catch(async (err) => err);
 
   return data;
 }

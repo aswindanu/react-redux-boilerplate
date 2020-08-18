@@ -15,9 +15,7 @@ export default async function axiosUser() {
     .then(async (response) => {
       return response.data;
     })
-    .catch(async (err) => {
-      console.log(err);
-    });
+    .catch(async (err) => err);
 
   return data;
 }

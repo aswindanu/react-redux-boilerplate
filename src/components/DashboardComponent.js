@@ -44,9 +44,7 @@ export class Dashboard extends Component {
         const nameFour = response[3].name;
         userActions(`${nameOne}, ${nameTwo}, ${nameThree}, and ${nameFour}`);
       })
-      .catch(async (err) => {
-        console.log(err);
-      });
+      .catch(async (err) => err);
   }
 
   /**
@@ -60,9 +58,7 @@ export class Dashboard extends Component {
       .then(async (response) => {
         loginActions(`${JSON.stringify(response.access_token)}`);
       })
-      .catch(async (err) => {
-        console.log(err);
-      });
+      .catch(async (err) => err);
   }
 
   /**
